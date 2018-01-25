@@ -23,6 +23,7 @@ class linkedList {
     if (current.value) {
       this.head = this.head.next;
     }
+    //returns the removed item;
     return current.value;
   }
 
