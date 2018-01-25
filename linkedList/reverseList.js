@@ -13,6 +13,15 @@ const reverseList = list => {
   return prev;
 };
 
+const reverseRecursive = list => {
+  if (!list.next) return list;
+  else newStart = reverseRecursive(list.next);
+
+  list.next.next = list;
+  list.next = null;
+  return newStart;
+};
+
 const list = {
   value: 1,
   next: { value: 2, next: { value: 3, next: { value: 4, next: null } } }
