@@ -44,5 +44,5 @@ bst.insert(11);
 bst.insert(9);
 bst.insert(8);
 // console.log(bst);
-console.log(bst.contains(10));
-console.log(bst.contains(1));
+// console.log(bst.contains(10));
+// console.log(bst.contains(1));
