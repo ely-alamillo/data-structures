@@ -32,6 +32,22 @@ class BST {
     }
     return false;
   }
+
+  DFS(cb) {
+    const search = node => {
+      if (node) {
+        cb(node.value);
+        search(node.left);
+        search(node.right);
+      }
+    };
+    search(this);
+  }
+
+  BFS(cb) {
+    let queue = Object.values(this);
+    cb(queue);
+  }
 }
 
 const bst = new BST();
@@ -41,7 +57,5 @@ bst.insert(100);
 bst.insert(120);
 bst.insert(30);
 // console.log(bst);
-
-console.log(bst.contains(0));
-console.log(bst.contains(100));
-console.log(bst.contains(30));
+// bst.DFS(node => console.log(node));
+bst.BFS(node => console.log(node));
